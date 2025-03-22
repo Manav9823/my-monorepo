@@ -10,12 +10,10 @@ applications:
           commands:
             - npm run build --workspace=web
       artifacts:
-        baseDirectory: apps/web/.next
+        baseDirectory: packages/web/.next
         files:
-          - '*/'
+          - '**/*'
       cache:
         paths:
           - node_modules/*/
-          - apps/web/node_modules/*/
-          - .next/cache/*/
-    appRoot: .
+    appRoot: packages/nextjs-app
